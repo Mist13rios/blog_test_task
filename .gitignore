@@ -1,0 +1,4 @@
+__init__.py
+blog/blog/__pycache__/
+blog/blog_app/__pycache__/
+blog/blog_app/migrations/
