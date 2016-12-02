@@ -1,7 +1,7 @@
 $(document).ready(function () {
     alert('doc ready');
     console.log("form loaded!");
-}
+});
 
 
 // Стандартную функция передачи токена защиты для форм
