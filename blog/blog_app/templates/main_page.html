@@ -17,11 +17,22 @@
 
 </head>
 
-<body style='background-color: #2F363C; font-family:Arial;''>
-<div>
+<body style='font-family:Arial;'>
+<div style='height: 100%;'>
 
-<a> Working! </a>
+  <div class='col-md-2'>
+  </div>
 
+  <div class='col-md-8' style='color:black; padding-top: 1%; height: 100%;'>
+    {% for user in all_users %}
+      <div class='row'>
+      <a style='color:black; cursor:pointer; text-decoration: none;'> Names of User: {{user.name}} </a> </br>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class='col-md-2' style='height:100%;'>
+  </div>
 </div>
 </body>
 </html>

@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    alert('doc ready');
-    console.log("form loaded!");
+    console.log("page loaded!");
+    $('#user').on(click, user_select(this));
 });
 
-
+}
 // Стандартную функция передачи токена защиты для форм
 $(function() {
 
