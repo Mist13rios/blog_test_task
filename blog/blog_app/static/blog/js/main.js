@@ -1,9 +1,27 @@
 $(document).ready(function () {
     console.log("page loaded!");
-    $('#user').on(click, user_select(this));
+    
+    $('#users').on('click', 'p', function(){
+        var user_id = this.id;
+        user_news(user_id);
+        window.user_id = user_id;
+        console.log('click detected ' + user_id);
+    });
 });
 
-}
+function user_news(user_id){
+    $.ajax({
+        url : 'news',
+        type : 'GET',
+        data : { 'user_id' : user_id},
+        success : function(json){
+            $('#lenta .col-md-12').remove();
+            $('#lenta').append(json);
+        }
+    });
+};
+
+
 // Стандартную функция передачи токена защиты для форм
 $(function() {
 

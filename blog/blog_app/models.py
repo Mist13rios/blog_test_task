@@ -14,10 +14,5 @@ class Blog_entry(models.Model):
 
 class User(models.Model):
     name = models.CharField(max_length=64)
-    subscripers = models.ManyToManyField(Blog)
+    subscription = models.ManyToManyField(Blog)
     read = models.ManyToManyField(Blog_entry)
-
-    def __init(self):
-        return [self.name,
-            self.subscripers,
-            self.read]

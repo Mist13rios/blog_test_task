@@ -1,0 +1,13 @@
+<div class='col-md-12'>
+  {% for news in news_list %}  
+    <div class='row'>
+      <p>       Header :      {{news.0}} </p>
+      <p>     Publish date: {{news.1}} </p>
+    </div>
+    
+    <div class='row'> 
+      <p>     Text area: </p>
+      <p> {{news.2}} </p> 
+    </div>
+  {% endfor %}
+</div>
